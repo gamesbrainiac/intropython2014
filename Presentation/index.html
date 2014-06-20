@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Introduction to Python</title>
+    <meta name="description" content="Python Workshop 2014"/>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <article id="presentation">
+        
+            <section  ><h1>Introduction to Python</h1>
+
+<h3><a href="https://twitter.com/gamesbrainiac">@gamesbrainiac</a></h3></section>
+        
+            <section data-bespoke-state="green" class="light"><h2 class="bullet">Me</h2>
+
+<ul>
+    <li>Python Programmer</li>
+    <li>Language Aficionado</li>
+    <li>Stackoverflow User</li>
+    <li>Author @ PACKT Publishing [Mastering PyCharm]</li>
+</ul></section>
+        
+            <section  ><h1>Why Python?</h1></section>
+        
+            <section  ><h2 class="bullet">Widely Used</h2>
+
+<p>
+    <img src="http://creativetechs.com/tipsblog/wp-content/uploads/2009/11/DropBox.png" alt="Dropbox"
+         class="avatar--small"/>
+    <img src="http://www.rabbithole2.com/presentation/news/cosmic_news/images/nasa-logo.gif" alt="NASA" class="avatar--small"/>
+    <img src="http://www.digibuzzme.com/wp-content/uploads/2012/08/favicon.png" alt="Google" class="avatar--small"/>
+    <img src="http://icons.iconarchive.com/icons/martz90/circle/512/yahoo-icon.png" alt="Yahoo" class="avatar--small"/>
+</p>
+<p>
+    <img src="http://icons.iconarchive.com/icons/xenatt/the-circle/512/App-Pinterest-icon.png" alt="Pinterest"
+         class="avatar--small"/>
+</p>
+
+<p>
+    <img src="http://haliengelman.com/images/linkedin.png" alt="LinkedIn" class="avatar--small"/>
+</p></section>
+        
+            <section  ><h2>Too many
+</h2>
+
+<img src="http://babyology.com.au/wp-content/uploads/2013/02/too-many-elephants-in-this-house-ursula-dubosarsky-3.jpg"
+     alt="elephants"/></section>
+        
+            <section  ><h2>No semicolons</h2>
+
+<pre class="language-python"><code>print("Hello World")
+a = 10 # assignment
+b = 20
+c = a + b # numbers can be as large as you like</code>
+</pre></section>
+        
+            <section  ><h2>Beautiful Syntax</h2>
+
+<pre class="language-python"><code>from functools import lru_cache  # This is an import
+
+@lru_cache()  # This is a decorator
+def fib(n):
+    if n <= 1:
+        return 1
+    return fib(n - 1) + fib(n - 2)</code>
+</pre></section>
+        
+            <section  ><h2>Too good to be true?</h2>
+
+<img src="http://i0.wp.com/www.reactiongifs.com/wp-content/uploads/2013/11/chkn.gif" alt="chicken"/></section>
+        
+            <section  ><h2>There's <b>MORE</b></h2></section>
+        
+            <section  ><h2>Math</h2>
+
+<h3>
+    Python has a library called matplotlib, that is immensely powerful
+</h3></section>
+        
+            <section data-bespoke-state="green" class="light"><h1>Matplotlib</h1>
+
+<h2>Demo!</h2></section>
+        
+            <section  ><h2>The response</h2>
+
+<h3>I must admit that it is a good mathematical model.</h3></section>
+        
+            <section data-bespoke-state="green" class="light"><h2 class="bullet">Web Frameworks</h2>
+
+<ul>
+    <li>Django</li>
+    <li>Flask</li>
+    <li>Pyramid</li>
+    <li>Web2py</li>
+    <li><b>...</b></li>
+</ul></section>
+        
+            <section  ><h2>Music</h2>
+
+<h3>
+    <a href="http://static.echonest.com/BohemianRhapsichord/index.html">Bohemian Rhapsody</a>
+</h3></section>
+        
+            <section data-bespoke-state="green" class="light"><h2 class="bullet">Games</h2>
+
+<ul>
+    <li>PyGame - A library for writing games</li>
+    <li>Battle Field 2</li>
+    <li>EVE Online</li>
+    <li>Sid Meier's Civilization IV</li>
+</ul></section>
+        
+            <section  ><h2>Mobile</h2>
+
+<a href="https://www.youtube.com/watch?v=1Qa98oSPgi0">A Game made using Kivy</a>
+
+This works for both Android and iOS.</section>
+        
+            <section  ><h2>No Worries</h2>
+
+<h3>Sometimes we get carried away.</h3></section>
+        
+            <section  ><h2>Lets get started</h2>
+
+<h3>Fire up bpython</h3>
+
+<pre class="language-bash"><code>$ bpython</code>
+</pre></section>
+        
+            <section  ><h2>Numbers</h2>
+
+<pre class="language-python"><code>>>> a = 10
+>>> b = 20
+>>> a / b
+0.5
+
+# You don't need to care about number types
+>>> type(a / b)
+< class 'float'>
+>>> type(a)
+< class 'int'>  # Python knows all :)
+>>> a += 10
+>>> a
+20
+>>> a + b
+40
+>>> a * b
+400
+>>> a *= a
+>>> a
+400
+>>> a *= b
+>>> a
+8000</code>
+</pre></section>
+        
+            <section  ><h2>Strings</h2>
+
+<pre class="language-python"><code>greeting = "hello world"
+print(greeting)
+
+# the value of greeting does not change
+greeting.replace('o', '0')
+print(greeting)</code>
+</pre></section>
+        
+            <section  ><h2>Lists</h2>
+
+<pre class="language-python"><code>a_list = ['the', 'world', 'is', 'messed', 'up']
+a_list[0]  # 'the'
+a_list[1]  # 'world'
+# Adding new stuff to a list
+a_list += ['yolo']
+# a_list = ['the', 'world', 'is', 'messed', 'up', 'yolo']</code>
+</pre></section>
+        
+            <section  ><h2>Tuples</h2>
+
+<pre class="language-python"><code>a = (1, 2, 3, 4)</code>
+</pre></section>
+        
+            <section  ><h2>namedtuple</h2>
+
+<pre class="language-python"><code>>>> from collections import namedtuple
+>>> Point = namedtuple('Point', 'x y')
+>>> Point(1, 0)
+Point(x=1, y=0)
+>>> p1 = Point(0, 0)
+>>> p1.x
+0
+>>> p1.y</code>
+</pre></section>
+        
+            <section  ><h2>Control flow</h2>
+
+<h3><pre class="language-python"><code>if/elif/else</code>
+</pre></h3></section>
+        
+            <section  ><h2>Functions</h2>
+
+<h3><i>First class objects</i></h3>
+<h3><i>Functions inside functions</i></h3>
+<h3><i>Function <b>inception</b> :^)</i></h3>
+
+<pre class="language-python"><code>def func(a):
+    def inner_func(b):
+        ...
+        def inner_most_func(c):
+            ...
+    return inner_func(a ** 2)</code>
+</pre></section>
+        
+            <section  ><h2>Functions <br/><i>with <b>Ananta Jalil</b>
+</i></h2>
+
+<pre class="language-python"><code>def jalil_answer(s):
+    return "I am da becht Heru"</code>
+</pre></section>
+        
+            <section  ><h2>Loops</h2>
+
+<pre class="language-python"><code>for/while</code>
+</pre>
+
+<pre class="language-python"><code>for name in names:
+    print(name)</code>
+</pre>
+
+<pre class="language-python"><code>import time
+
+while True:
+    time.sleep(1)
+    print('zzzz')</code>
+</pre></section>
+        
+            <section  ><h2>Ranges</h2>
+
+<pre class="language-python"><code>for i in range(10):
+    print(i)</code>
+</pre>
+
+<pre class="language-python"><code># this will print out all the odd numbers
+for i in range(1, 10, 2):  # bpython ftw!!
+    print(i)</code>
+</pre></section>
+        
+            <section  ><h2>2 lists with 1 loop</h2>
+
+<h3><i>zip</i></h3>
+
+<pre class="language-python"><code>l1 = "my name not".split()
+l2 = "horse's is earl".split()
+
+for a, b in zip(l1, l2):
+    print(a, b, end=' ')</code>
+</pre></section>
+        
+            <section  ><h2>Dictionaries / Hashmaps</h2>
+
+<h3>A bunch of Key-Value pairs</h3>
+
+<pre class="language-python"><code>>>> a_dict = {
+... 'is_cool': True,
+... 'name': 'nafiul',
+... 'is_hungry': True}
+>>> a_dict['is_hungry']
+True
+>>> a_dict['name']
+'nafiul'</code>
+</pre></section>
+        
+            <section  ><h2>Sets</h2>
+
+<pre class="language-python"><code>>>> a_set = {1, 2, 3, 4, 5}
+>>> a_set.add(1)
+>>> a_set
+{1, 2, 3, 4, 5}
+>>> a_set.add(8)
+>>> a_set
+{1, 2, 3, 4, 5, 8}
+>>> a_set.add(8)
+>>> a_set
+{1, 2, 3, 4, 5, 8}</code>
+</pre></section>
+        
+            <section  ><h2>Your turn!</h2>
+
+<h3>Questions on the next page</h3></section>
+        
+            <section  ><pre class="language-bash"><code></code>Find the sum of the first 100 natural numbers</pre>
+<pre class="language-bash"><code></code>Make a function that tells you whether
+a word is a vowel or a consonant</pre>
+<pre class="language-bash"><code>Make a random string generator</code></pre>
+<pre class="language-bash"><code>Make a Palindrome checker</code></pre></section>
+        
+            <section  ><h2>Write a function that produces this</h2>
+
+<pre class="language-bash"><code>+ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +</code>
+</pre></section>
+        
+            <section  ><h2>Write a function that shows you new files being created</h2>
+
+<h3><i>Hint</i> You will need to use the <b>os</b> module</h3>
+
+<h3><i>Hint</i> Search for "Python 3 os module documentation"</h3></section>
+        
+            <section  ><h2>The solution</h2>
+
+<pre class="language-python"><code>>>> def all_files():
+...     return set(os.listdir('.'))
+...
+>>> before = all_files()
+>>> while True:
+...     time.sleep(0.5)
+...     new = all_files()
+...     change = new - before
+...     for f in change:
+...         print(f)
+...
+...     before = new
+...
+...</code>
+</pre></section>
+        
+            <section  ><h2>I hope you had a lot of fun!</h2></section>
+        
+    </article>
+
+    <script src="scripts/main.js"></script>
+
+    <script>
+        bespoke.from('#presentation',
+                     { bullets: "li, .bullet",
+                         hash: true,
+                         keys: true,
+                         fullscreen: true,
+                         progress: true,
+                         scale: true,
+                         state: true,
+                         touch: true }
+        );
+    </script>
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script type="text/javascript">
+        hljs.configure({classPrefix: ''});
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+</html>
